@@ -1,0 +1,561 @@
+/* 
+ * ------------------------------------------------------------------------------------ 
+ * Halaman home
+ * ------------------------------------------------------------------------------------
+ */
+
+body {
+    background-color: #f5f2f2;
+}
+
+/* 
+ * ------------------------------------------------------------------------------------ 
+ * Header
+ * ------------------------------------------------------------------------------------
+ */
+body header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 90%;
+    margin: auto;
+}
+
+body header img {
+    width: 100px;
+}
+
+body header nav {
+    display: flex;
+}
+
+body header a {
+    text-decoration: none;
+    color: #707070;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin: 0 15px;
+    font-size: 15px;
+}
+
+body header a:hover {
+    color: #000;
+}
+
+body header a:target {
+    border-bottom: 2px solid #ffc831;
+}
+
+body header a p {
+    display: inline;
+    color: #ffc831;
+}
+
+/* 
+ * ------------------------------------------------------------------------------------ 
+ * Konten
+ * ------------------------------------------------------------------------------------
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+  --orange:#ffa500;
+}
+
+*{
+  font-family: 'Nunito', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  outline: none; border:none;
+  text-decoration: none;
+  transition: all .2s linear;
+}
+
+*::selection{
+  background:var(--orange);
+  color:#fff;
+}
+
+html{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+  scroll-behavior: smooth;
+}
+
+section{
+  padding:2rem 9%;
+}
+
+.heading{
+  text-align: center;
+  padding:2.5rem 0
+}
+
+.heading span{
+  font-size: 3.5rem;
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+  border-radius: .5rem;
+  padding:.2rem 1rem;
+}
+
+.heading span.space{
+  background:none;
+}
+
+.btn{
+  display: inline-block;
+  margin-top: 1rem;
+  background:var(--orange);
+  color:#fff;
+  padding:.8rem 3rem;
+  border:.2rem solid var(--orange);
+  cursor: pointer;
+  font-size: 1.7rem;
+}
+
+.btn:hover{
+  background:rgba(255, 165, 0,.2);
+  color:var(--orange);
+}
+
+#menu-bar{
+  color:#fff;
+  border:.1rem solid #fff;
+  border-radius: .5rem;
+  font-size: 3rem;
+  padding:.5rem 1.2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.packages .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:2rem;
+}
+
+.packages .box-container .box{
+  flex:1 1 30rem;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+}
+
+.packages .box-container .box img{
+  height: 25rem;
+  width:100%;
+  object-fit: cover;
+}
+
+.packages .box-container .box .content{
+  padding:2rem;
+}
+
+.packages .box-container .box .content h3{
+  font-size:2rem;
+  color:#333;
+}
+
+.packages .box-container .box .content h3 i{
+  color:var(--orange);
+}
+
+.packages .box-container .box .content p{
+  font-size:15px;
+  color:#666;
+  padding:1rem 0;
+}
+
+.packages .box-container .box .content .stars i{
+  font-size:1.7rem;
+  color:var(--orange);
+}
+
+.packages .box-container .box .content .price{
+  font-size: 2rem;
+  color:#333;
+  padding-top: 1rem;
+}
+
+.packages .box-container .box .content .price span{
+  color:#666;
+  font-size: 1.5rem;
+  text-decoration: line-through;
+}
+
+.gallery .box-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap:1.5rem;
+}
+
+.gallery .box-container .box{
+  overflow: hidden;
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.1);
+  border:1rem solid #fff;
+  border-radius: .5rem;
+  flex:1 1 30rem;
+  height: 25rem;
+  position: relative;
+}
+
+.gallery .box-container .box img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
+
+.gallery .box-container .box .content{
+  position: absolute;
+  top:-100%; left:0;
+  height: 100%;
+  width:100%;
+  text-align: center;
+  background:rgba(0,0,0,.7);
+  padding:2rem;
+  padding-top: 5rem;
+}
+
+.gallery .box-container .box:hover .content{
+  top:0;
+}
+
+.gallery .box-container .box .content h3{
+  font-size: 2.5rem;
+  color:var(--orange);
+}
+
+.gallery .box-container .box .content p{
+  font-size: 15px;
+  color:#eee;
+  padding:.5rem 0;
+}
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+  html{
+    font-size: 50%;
+  }
+
+}
+
+@media (max-width:991px){
+
+  header{
+    padding:2rem;
+  }
+
+  section{
+    padding:2rem;
+  }
+
+}
+
+@media (max-width:768px){
+
+  #menu-bar{
+    display: initial;
+  }
+
+  header .navbar{
+    position: absolute;
+    top:100%; right:0; left: 0;
+    background: #333;
+    border-top: .1rem solid rgba(255,255,255,.2);
+    padding:1rem 2rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  header .navbar a{
+    display: block;
+    border-radius: .5rem;
+    padding:1.5rem;
+    margin:1.5rem 0;    
+    background:#222;
+  }
+
+}
+
+@media (max-width:450px){
+
+  html{
+    font-size: 50%;
+  }
+
+  .heading span{
+    font-size: 2.5rem;
+  }
+
+  .contact .row form .inputBox input{
+    width:100%;
+  }
+
+}
+
+@media (max-width:450px){
+
+    html{
+      font-size: 50%;
+    }
+  
+    .heading span{
+      font-size: 2.5rem;
+    }
+  
+    .contact .row form .inputBox input{
+      width:50%;
+    }
+}
+
+
+
+
+
+section {
+    width: 90%;
+    margin: auto;
+}
+
+/* 
+ * ------------------------------------------------------------------------------------ 
+ * Bagian pertama
+ * ------------------------------------------------------------------------------------
+*/
+.destinasi {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.destinasi p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #707070;
+    font-size: 11pt;
+}
+
+.destinasi p:nth-child(2) {
+    font-weight: bold;
+    font-size: 20pt;
+    color: #000;
+}
+
+.destinasi div {
+    display: grid;
+    grid-template-areas:
+        'satu dua tiga'
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.destinasi a {
+    padding: 20px;
+    width: fit-content;
+    background-color: #fff;
+    margin: 10px;
+    border: 1px solid #999;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.destinasi a:hover {
+    box-shadow: -3px 7px 0 0 rgba(0, 0, 0, .2);
+    transform: translate(3px, -7px);
+}
+
+.destinasi img {
+    width: 200px;
+    height: 200px;
+}
+
+.destinasi a p:nth-child(2) {
+    font-size: 15pt;
+    margin: 15px 0 0 20px;
+}
+
+/* 
+ * ------------------------------------------------------------------------------------ 
+ * Bagian kedua
+ * ------------------------------------------------------------------------------------
+*/
+.testimoni {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.testimoni p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+    font-weight: 600;
+}
+
+.testimoni p:nth-child(2) {
+    margin: 30px 0;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.testimoni div {
+    display: flex;
+    justify-content: center;
+}
+
+.testimoni a {
+    background-color: #fff;
+    text-decoration: none;
+    padding: 30px 40px;
+    margin: 5px;
+    border: 1px solid #999;
+    transition: .3s;
+    color: #000;
+}
+
+.testimoni a:hover {
+    margin: 0;
+    padding: 40px 60px;
+}
+
+.testimoni a p:nth-child(2) {
+    font-weight: normal;
+    font-size: 10pt;
+}
+
+.testimoni .profil {
+    display: grid;
+    grid-template-areas:
+        'img div'
+    ;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+}
+
+.testimoni .profil img {
+    grid-area: img;
+    width: 30px;
+    padding: 20px;
+    border-radius: 50%;
+    border: 1px solid #fe9923;
+}
+
+.testimoni .profil div {
+    text-align: left;
+    grid-area: div;
+    display: block;
+    margin: auto;
+}
+
+.testimoni .profil div p:first-child {
+    font-size: 14pt;
+    font-weight: 700;
+    margin: 0;
+}
+
+.testimoni .profil div p:last-child {
+    font-size: 10pt;
+    font-weight: 700;
+    margin: 0;
+    color: #ffc831;
+}
+
+.testimoni p:last-child {
+    text-align: left;
+    color: #333;
+}
+
+/* 
+ * ------------------------------------------------------------------------------------ 
+ * Footer
+ * ------------------------------------------------------------------------------------
+*/
+footer {
+    margin-top: 100px;
+}
+
+footer .footer-bagian-pertama {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 100px;
+    background-color: #fff;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    font-size: 15px;
+}
+
+footer .footer-bagian-pertama img {
+    width: 150px;
+}
+
+footer .footer-bagian-pertama div div {
+    margin: 15px 30px;
+}
+
+footer .footer-bagian-pertama a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+footer .footer-bagian-pertama a:hover {
+    color: #ffc831;
+}
+
+footer .kontak {
+    margin: 20px 0 0 -300px;
+}
+
+footer .kontak h1 {
+    font-size: 15pt;
+}
+
+footer .kontak ul li {
+    margin: 20px 0;
+}
+
+footer .kontak ul li p {
+    color: #ffc831;
+}
+
+footer .kontak ul li a:hover {
+    color: #000;
+}
+
+footer .footer-bagian-pertama img:last-child {
+    width: 400px;
+}
+
+footer .kontak {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    color: #555;
+}
+
+footer .footer-bagian-kedua {
+    padding: 20px;
+    text-align: center;
+}
+
+footer .footer-bagian-kedua a {
+    text-decoration: none;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 13pt;
+    font-weight: bold;
+}
